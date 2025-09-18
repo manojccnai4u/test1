@@ -17,6 +17,7 @@ provider "azurerm" {
 
 variable = "azurerm_storage_account" {
 type = string
+default = "manojteststorage"
 }
 
 # Create a resourec Group 
@@ -27,7 +28,7 @@ resource "azurerm_resource_group" "rg" {
 
 # Create a Storage Account 
 resource "azurerm_storage_account" "tfstorage" {
-  name                     = "storagetfstorage540540"
+  name                     = "var.azurerm_storage_account"
   resource_group_name      = azurerm_resource_group.rg.name
   location                 = azurerm_resource_group.rg.location # Implicit depency
   account_tier             = "Standard"

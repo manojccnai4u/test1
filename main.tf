@@ -15,6 +15,10 @@ provider "azurerm" {
   }
 }
 
+variable = "azurerm_storage_account" {
+type = string
+}
+
 # Create a resourec Group 
 resource "azurerm_resource_group" "rg" {
   name     = "rg_tf_state"

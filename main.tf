@@ -15,7 +15,7 @@ provider "azurerm" {
   }
 }
 
-variable = "azurerm_storage_account" {
+variable "azurerm_storage_account" {
 type = string
 default = "manojteststorage"
 }
